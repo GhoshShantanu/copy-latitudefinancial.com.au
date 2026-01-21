@@ -17,6 +17,7 @@ common_btn_blue_bg
 <!-- section -->
 .commn_bnr
 .commn-bg-blue
+.commn-bg-dark-blue
 .commn-bg-grey
 .commn-bg-dark-grey
 .commn-prple-bg
