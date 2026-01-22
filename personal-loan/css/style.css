@@ -343,6 +343,62 @@ width: 46%;
   letter-spacing: -.04375rem;
   margin-bottom: 32px;
 }
+.applyBox_wrapper{
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.applyBox{
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px 32px;
+    background: #fff;
+    border-radius: 12px;
+    min-width: 255px;
+    width: 22.8%;
+    flex: 0 0 auto;
+}
+@media (max-width:991px) {
+ .applyBox{
+    width: 47%;
+ }   
+}
+@media (max-width:767px) {
+ .applyBox{
+    width: 100%;
+ }   
+}
+.applyBox_icon svg{
+    fill: none !important;
+    stroke: none !important;
+    height: 80px !important;
+    margin: 0 !important;
+    width: 80px !important;
+}
+.applyBox .card_title_20_black{
+    margin-bottom: 0px;
+    text-align: left;
+}
+.applyBox .card_desc_18{
+        color: #4d4d4d !important;
+}
+.applyLink{
+    margin-top: 32px;
+}
+.applyLink a{
+    text-decoration: underline;
+    color: rgb(3 95 231);
+    font-size: 18px;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    transition: 0.15s ease-in-out;
+    font-family: Roboto, sans-serif;
+}
 /* applySec_end */
 
 /* readySec_start */
@@ -599,5 +655,54 @@ width: 46%;
         font-size: 24px;
         margin: 0px 0px 0px 6px;
     }
+}
+.info_row_wrapper{
+    max-width: 890px;
+    margin: 0 auto;
+}
+@media (max-width:1199px) {
+    .info_row_wrapper{
+    max-width: 800px;
+    margin: 0 auto;
+}
+}
+@media (max-width:991px) {
+    .info_row_wrapper{
+    max-width: 576px;
+    margin: 0 auto;
+}
+}
+@media (max-width:767px) {
+    .info_row_wrapper{
+    max-width: 420px;
+    margin: 0 auto;
+}
+}
+@media (max-width:575px) {
+    .info_row_wrapper{
+    padding: 0 25px;
+}
+}
+.info_row_wrapper p{
+    font-family: Roboto, "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    color: rgb(66, 72, 77);
+    margin: 14px 0;
+}
+.info_row_wrapper p a{
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    transition: 0.15s ease-in-out;
+    border-bottom: 1px solid rgba(0, 106, 255, 0.5);
+    color: rgb(0, 106, 255);
+}
+.info_row_wrapper p a:hover{
+    border-bottom: 1px solid rgb(0, 106, 255);
+    text-shadow: rgb(0, 106, 255) 0px 0px 1px;
 }
 /* infoSec_end */
