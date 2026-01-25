@@ -3,7 +3,7 @@ Here is all the classes
 <!-- button -->
 .common_btn_blue
 .common_btn_green
-common_btn_blue_bg
+.common_btn_blue_bg
 
 <!-- text -->
 .bnr_heading
