@@ -28,6 +28,9 @@ a:hover{
     border-bottom: 1px solid #006aff;
     text-shadow: 0 0 1px #006aff;
 }
+.bottom_bnr_sticky_nav .sticky_nv_item li a{
+    color: #000 !important;
+}
 p ,ul{
     padding: 0;
     margin: 0;
