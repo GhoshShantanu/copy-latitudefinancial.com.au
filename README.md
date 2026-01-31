@@ -4,7 +4,7 @@ Here is all the classes
 .common_btn_blue
 .common_btn_green
 .common_btn_blue_bg
-
+.round_btn
 <!-- text -->
 .bnr_heading
 .bnr_paragraph
@@ -12,7 +12,9 @@ Here is all the classes
 .section_heading_30
 .section_heading_blue_32
 .section_heading_24
+.section_heading_40
 .commn_para_18
+.commn_para_16
 
 <!-- section -->
 .commn_bnr
@@ -21,7 +23,7 @@ Here is all the classes
 .commn-bg-grey
 .commn-bg-dark-grey
 .commn-prple-bg
-
+.commn-bg-light
 <!-- card-css -->
 .card_title_24
 .card_title_22
