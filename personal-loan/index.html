@@ -71,6 +71,7 @@
         </div>
     </section>
     <!-- personal_ln_bnr_end -->
+
     <!-- bottom_bnr_sticky_nav_start -->
     <section class="bottom_bnr_sticky_nav">
         <div class="container custom_container">
@@ -101,6 +102,7 @@
         </div>
     </section>
     <!-- bottom_bnr_sticky_nav_end -->
+
     <!-- personal_ln_chooseSec_start -->
     <section class="personal_ln chooseSec commn-bg-dark-grey">
         <div class="container custom_container">
@@ -305,6 +307,103 @@
         </div>
     </section>
     <!-- personal_ln_chooseSec_start -->
+
+    <!-- Calculator -->
+    <section class="calculator">
+        <div class="container custom_container">
+            <p class="section_heading_32">Get an estimate of your repayments</p>
+            <div class="calculator_wrapper">
+                <div class="left">
+                    <div class="amount_term">
+                        <div class="group">
+                            <div class="label">I'd like to borrow</div>
+                            <div class="value">$<span id="amountText">200,000</span></div>
+                            <input type="range" id="amount" min="5000" max="200000" step="1000" value="200000"
+                                class="range">
+                        </div>
+
+                        <div class="group">
+                            <div class="label">Loan term</div>
+                            <div class="value"><span id="termText">4</span> years</div>
+                            <input type="range" id="term" min="2" max="7" value="4" class="range">
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="label">At an interest rate of</div>
+                        <div class="value"><span id="rateText">8.99</span>% p.a.</div>
+                        <input type="range" id="rate" min="5" max="30" step="0.01" value="8.99" class="range">
+                    </div>
+
+                    <div style="display:flex;justify-content:space-between;font-size:13px;color:#777">
+                        <div>
+                            <div id="minRate">8.99%</div>
+                            <div id="comparisonRate" style="font-size:12px;color:#999">(10.67% Comparison rate p.a*)
+                            </div>
+                        </div>
+                        <span id="maxRate">29.39%</span>
+                    </div>
+
+                    <div class="group">
+                        <div class="label">Fixed or Variable?</div>
+                        <div class="toggle">
+                            <button class="active">Fixed</button>
+                            <button>Variable</button>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <div class="label">Repayments every</div>
+                        <div class="freq">
+                            <button data-f="52">Week</button>
+                            <button data-f="26">Fortnight</button>
+                            <button data-f="12" class="active">Month</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div>Estimated repayment including typical fees</div>
+                    <div class="result-big">$<span id="repayment">5,012</span><small>/month</small></div>
+
+                    <div class="result-small">
+                        <div>
+                            <div>Total interest paid</div>
+                            <strong>$<span id="interest">39,359</span></strong>
+                        </div>
+                        <div>
+                            <div>Total amount paid</div>
+                            <strong>$<span id="total">240,546</span></strong>
+                        </div>
+                    </div>
+
+                    <div class="link" onclick="openModal()">ⓘ View Fee Breakdown</div>
+                    <div class="btn">Get your personalised rate</div>
+                </div>
+            </div>
+            <p class="fees_charges">This calculator is provided for illustrative purposes only and does not constitute a
+                quote or pre-qualification. The interest rate you may be offered can differ from the interest rate
+                displayed above and will be based on your personal circumstances. The total amount paid includes
+                establishment and monthly fees. See all <a href="#">Fees & Charges</a> for this product.</p>
+        </div>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">✕</span>
+                <h3>Fee breakdown</h3>
+
+                <div class="row"><strong>Estimated repayments</strong><strong>$<span id="modalRepay">5,012</span> /
+                        month</strong></div>
+                <hr>
+                <div class="row"><span>Standard payment including interest and establishment fee
+                        ($395)</span><span>$<span id="basePay">4,995.50</span></span></div>
+                <div class="row"><span>Loan Service Fee</span><span>$<span id="serviceFeeDisplay">16.50</span></span>
+                </div>
+                <div class="row"><span>Direct Debit Fee</span><span>$<span id="directDebitDisplay">0.00</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator -->
 
     <!-- monthSec_start -->
     <section class="personal_ln monthSec">
@@ -529,26 +628,19 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="accordion compare_accordion" id="compare-left-accr">
-                                        <div class="accordion-item">
+                                    <div class="accordion compare_accordion synced-accordion" data-side="left">
+
+                                        <div class="accordion-item" data-index="0">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#compareLeftOne" aria-expanded="true"
-                                                    aria-controls="compareLeftOne">
+                                                <button class="accordion-button" type="button">
                                                     Standard fees
-                                                    <svg color="#000000" direction="down" class="" width="14px"
-                                                        height="8px" viewBox="0 0 14 8" version="1.1">
-                                                        <g stroke="none" fill-rule="evenodd" stroke-linecap="round"
-                                                            stroke-linejoin="round">
-                                                            <polyline stroke="currentcolor" fill="none"
-                                                                points="1.15307617 6.847229 6.9956665 1.15771484 12.859314 6.85333252">
-                                                            </polyline>
-                                                        </g>
+                                                    <svg width="14" height="8" viewBox="0 0 14 8">
+                                                        <polyline stroke="currentColor" fill="none"
+                                                            points="1 7 7 1 13 7" />
                                                     </svg>
                                                 </button>
                                             </h2>
-                                            <div id="compareLeftOne" class="accordion-collapse collapse show"
-                                                data-bs-parent="#compare-left-accr">
+                                            <div class="accordion-collapse collapse show">
                                                 <div class="accordion-body">
                                                     <p><strong>Establishment fee</strong> $395</p>
                                                     <p><strong>Loan service fee</strong> $16.50 per month</p>
@@ -556,25 +648,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
+
+                                        <div class="accordion-item" data-index="1">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#compareLeftTwo"
-                                                    aria-expanded="false" aria-controls="compareLeftTwo">
+                                                <button class="accordion-button collapsed" type="button">
                                                     Other fees (if applicable)
-                                                    <svg color="#000000" direction="down" class="" width="14px"
-                                                        height="8px" viewBox="0 0 14 8" version="1.1">
-                                                        <g stroke="none" fill-rule="evenodd" stroke-linecap="round"
-                                                            stroke-linejoin="round">
-                                                            <polyline stroke="currentcolor" fill="none"
-                                                                points="1.15307617 6.847229 6.9956665 1.15771484 12.859314 6.85333252">
-                                                            </polyline>
-                                                        </g>
+                                                    <svg width="14" height="8" viewBox="0 0 14 8">
+                                                        <polyline stroke="currentColor" fill="none"
+                                                            points="1 7 7 1 13 7" />
                                                     </svg>
                                                 </button>
                                             </h2>
-                                            <div id="compareLeftTwo" class="accordion-collapse collapse"
-                                                data-bs-parent="#compare-left-accr">
+                                            <div class="accordion-collapse collapse">
                                                 <div class="accordion-body">
                                                     <p><strong>BPAY® payment handling fee</strong> $1.95</p>
                                                     <p><strong>Late payment fee</strong> $45 if minimum repayment is not
@@ -584,25 +669,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
+
+                                        <div class="accordion-item" data-index="2">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#compareLeftThree"
-                                                    aria-expanded="false" aria-controls="compareLeftThree">
+                                                <button class="accordion-button collapsed" type="button">
                                                     Loan details
-                                                    <svg color="#000000" direction="down" class="" width="14px"
-                                                        height="8px" viewBox="0 0 14 8" version="1.1">
-                                                        <g stroke="none" fill-rule="evenodd" stroke-linecap="round"
-                                                            stroke-linejoin="round">
-                                                            <polyline stroke="currentcolor" fill="none"
-                                                                points="1.15307617 6.847229 6.9956665 1.15771484 12.859314 6.85333252">
-                                                            </polyline>
-                                                        </g>
+                                                    <svg width="14" height="8" viewBox="0 0 14 8">
+                                                        <polyline stroke="currentColor" fill="none"
+                                                            points="1 7 7 1 13 7" />
                                                     </svg>
                                                 </button>
                                             </h2>
-                                            <div id="compareLeftThree" class="accordion-collapse collapse"
-                                                data-bs-parent="#compare-left-accr">
+                                            <div class="accordion-collapse collapse">
                                                 <div class="accordion-body">
                                                     <p><strong>Loan amount</strong> From $5,000</p>
                                                     <p><strong>Repayment frequency</strong> Weekly, fortnightly, or
@@ -615,29 +693,24 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </td>
+
                                 <td>
-                                    <div class="accordion compare_accordion" id="compare-left-accr">
-                                        <div class="accordion-item">
+                                    <div class="accordion compare_accordion synced-accordion" data-side="right">
+
+                                        <div class="accordion-item" data-index="0">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#compareLeftOne" aria-expanded="true"
-                                                    aria-controls="compareLeftOne">
+                                                <button class="accordion-button" type="button">
                                                     Standard fees
-                                                    <svg color="#000000" direction="down" class="" width="14px"
-                                                        height="8px" viewBox="0 0 14 8" version="1.1">
-                                                        <g stroke="none" fill-rule="evenodd" stroke-linecap="round"
-                                                            stroke-linejoin="round">
-                                                            <polyline stroke="currentcolor" fill="none"
-                                                                points="1.15307617 6.847229 6.9956665 1.15771484 12.859314 6.85333252">
-                                                            </polyline>
-                                                        </g>
+                                                    <svg width="14" height="8" viewBox="0 0 14 8">
+                                                        <polyline stroke="currentColor" fill="none"
+                                                            points="1 7 7 1 13 7" />
                                                     </svg>
                                                 </button>
                                             </h2>
-                                            <div id="compareLeftOne" class="accordion-collapse collapse show"
-                                                data-bs-parent="#compare-left-accr">
+                                            <div class="accordion-collapse collapse show">
                                                 <div class="accordion-body">
                                                     <p><strong>Establishment fee</strong> $395</p>
                                                     <p><strong>Loan service fee</strong> $16.50 per month</p>
@@ -645,25 +718,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
+
+                                        <div class="accordion-item" data-index="1">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#compareLeftTwo"
-                                                    aria-expanded="false" aria-controls="compareLeftTwo">
+                                                <button class="accordion-button collapsed" type="button">
                                                     Other fees (if applicable)
-                                                    <svg color="#000000" direction="down" class="" width="14px"
-                                                        height="8px" viewBox="0 0 14 8" version="1.1">
-                                                        <g stroke="none" fill-rule="evenodd" stroke-linecap="round"
-                                                            stroke-linejoin="round">
-                                                            <polyline stroke="currentcolor" fill="none"
-                                                                points="1.15307617 6.847229 6.9956665 1.15771484 12.859314 6.85333252">
-                                                            </polyline>
-                                                        </g>
+                                                    <svg width="14" height="8" viewBox="0 0 14 8">
+                                                        <polyline stroke="currentColor" fill="none"
+                                                            points="1 7 7 1 13 7" />
                                                     </svg>
                                                 </button>
                                             </h2>
-                                            <div id="compareLeftTwo" class="accordion-collapse collapse"
-                                                data-bs-parent="#compare-left-accr">
+                                            <div class="accordion-collapse collapse">
                                                 <div class="accordion-body">
                                                     <p><strong>BPAY® payment handling fee</strong> $1.95</p>
                                                     <p><strong>Late payment fee</strong> $45 if minimum repayment is not
@@ -672,25 +738,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
+
+                                        <div class="accordion-item" data-index="2">
                                             <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#compareLeftThree"
-                                                    aria-expanded="false" aria-controls="compareLeftThree">
+                                                <button class="accordion-button collapsed" type="button">
                                                     Loan details
-                                                    <svg color="#000000" direction="down" class="" width="14px"
-                                                        height="8px" viewBox="0 0 14 8" version="1.1">
-                                                        <g stroke="none" fill-rule="evenodd" stroke-linecap="round"
-                                                            stroke-linejoin="round">
-                                                            <polyline stroke="currentcolor" fill="none"
-                                                                points="1.15307617 6.847229 6.9956665 1.15771484 12.859314 6.85333252">
-                                                            </polyline>
-                                                        </g>
+                                                    <svg width="14" height="8" viewBox="0 0 14 8">
+                                                        <polyline stroke="currentColor" fill="none"
+                                                            points="1 7 7 1 13 7" />
                                                     </svg>
                                                 </button>
                                             </h2>
-                                            <div id="compareLeftThree" class="accordion-collapse collapse"
-                                                data-bs-parent="#compare-left-accr">
+                                            <div class="accordion-collapse collapse">
                                                 <div class="accordion-body">
                                                     <p><strong>Loan amount</strong> From $5,000</p>
                                                     <p><strong>Repayment frequency</strong> Weekly, fortnightly, or
@@ -703,6 +762,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </td>
                             </tr>
@@ -922,98 +982,99 @@
     <section class="personal_ln helpSec commn-bg-dark-grey">
         <div class="container custom_container">
             <p class="section_heading_32">When life can't wait Latitude is here to help</p>
+            <div class="slider variable-width" id="helpSlick">
+                <div>
+                    <div class="helpBox">
+                        <div class="helpBox_img_wrapper">
+                            <img src="images/get-behind-the-wheel.png" alt="img">
+                        </div>
+                        <div class="helpBox_content">
+                            <p class="card_title_20_black">Get behind the wheel faster</p>
+                            <p class="card_desc_16_300">Drive away in your new car with ease. We're here to help make it
+                                happen.</p>
+                            <a href="#" class="common_btn_blue_bg">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="helpBox">
+                        <div class="helpBox_img_wrapper">
+                            <img src="images/simplify-your-finances.png" alt="img">
+                        </div>
+                        <div class="helpBox_content">
+                            <p class="card_title_20_black">Simplify your finances</p>
+                            <p class="card_desc_16_300">Take control and get back on track with the help of our debt
+                                consolidation loans.</p>
+                            <a href="#" class="common_btn_blue_bg">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="helpBox">
+                        <div class="helpBox_img_wrapper">
+                            <img src="images/renovate-your-castle.png" alt="img">
+                        </div>
+                        <div class="helpBox_content">
+                            <p class="card_title_20_black">Renovate your castle</p>
+                            <p class="card_desc_16_300">Build that dream kitchen, or entertain on your new deck. Turn
+                                your
+                                house into a home.</p>
+                            <a href="#" class="common_btn_blue_bg">Learn more</a>
+                        </div>
+                    </div>
+                </div>
 
-        </div>
-        <div class="slider variable-width" id="helpSlick">
-            <div>
-                <div class="helpBox">
-                    <div class="helpBox_img_wrapper">
-                        <img src="images/get-behind-the-wheel.png" alt="img">
-                    </div>
-                    <div class="helpBox_content">
-                        <p class="card_title_20_black">Get behind the wheel faster</p>
-                        <p class="card_desc_16_300">Drive away in your new car with ease. We're here to help make it
-                            happen.</p>
-                        <a href="#" class="common_btn_blue_bg">Learn more</a>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="helpBox">
-                    <div class="helpBox_img_wrapper">
-                        <img src="images/simplify-your-finances.png" alt="img">
-                    </div>
-                    <div class="helpBox_content">
-                        <p class="card_title_20_black">Simplify your finances</p>
-                        <p class="card_desc_16_300">Take control and get back on track with the help of our debt
-                            consolidation loans.</p>
-                        <a href="#" class="common_btn_blue_bg">Learn more</a>
+                <div>
+                    <div class="helpBox">
+                        <div class="helpBox_img_wrapper">
+                            <img src="images/get-the-medical-care.png" alt="img">
+                        </div>
+                        <div class="helpBox_content">
+                            <p class="card_title_20_black">Get the medical care you need</p>
+                            <p class="card_desc_16_300">Focus on your wellbeing with financial support tailored to your
+                                health needs.</p>
+                            <a href="#" class="common_btn_blue_bg">Learn more</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div class="helpBox">
-                    <div class="helpBox_img_wrapper">
-                        <img src="images/renovate-your-castle.png" alt="img">
-                    </div>
-                    <div class="helpBox_content">
-                        <p class="card_title_20_black">Renovate your castle</p>
-                        <p class="card_desc_16_300">Build that dream kitchen, or entertain on your new deck. Turn your
-                            house into a home.</p>
-                        <a href="#" class="common_btn_blue_bg">Learn more</a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="helpBox">
-                    <div class="helpBox_img_wrapper">
-                        <img src="images/get-the-medical-care.png" alt="img">
-                    </div>
-                    <div class="helpBox_content">
-                        <p class="card_title_20_black">Get the medical care you need</p>
-                        <p class="card_desc_16_300">Focus on your wellbeing with financial support tailored to your
-                            health needs.</p>
-                        <a href="#" class="common_btn_blue_bg">Learn more</a>
+                <div>
+                    <div class="helpBox">
+                        <div class="helpBox_img_wrapper">
+                            <img src="images/explore-the-open-road.png" alt="img">
+                        </div>
+                        <div class="helpBox_content">
+                            <p class="card_title_20_black">Explore the open road</p>
+                            <p class="card_desc_16_300">Focus on your wellbeing with financial support tailored to your
+                                health needs.</p>
+                            <a href="#" class="common_btn_blue_bg">Learn more</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div class="helpBox">
-                    <div class="helpBox_img_wrapper">
-                        <img src="images/explore-the-open-road.png" alt="img">
-                    </div>
-                    <div class="helpBox_content">
-                        <p class="card_title_20_black">Explore the open road</p>
-                        <p class="card_desc_16_300">Focus on your wellbeing with financial support tailored to your
-                            health needs.</p>
-                        <a href="#" class="common_btn_blue_bg">Learn more</a>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="helpBox">
-                    <div class="helpBox_img_wrapper">
-                        <img src="images/take-that-dream-holiday.jpg" alt="img">
-                    </div>
-                    <div class="helpBox_content">
-                        <p class="card_title_20_black">Take that dream holiday</p>
-                        <p class="card_desc_16_300">Focus on your wellbeing with financial support tailored to your
-                            health needs.</p>
-                        <a href="#" class="common_btn_blue_bg">Learn more</a>
+                <div>
+                    <div class="helpBox">
+                        <div class="helpBox_img_wrapper">
+                            <img src="images/take-that-dream-holiday.jpg" alt="img">
+                        </div>
+                        <div class="helpBox_content">
+                            <p class="card_title_20_black">Take that dream holiday</p>
+                            <p class="card_desc_16_300">Focus on your wellbeing with financial support tailored to your
+                                health needs.</p>
+                            <a href="#" class="common_btn_blue_bg">Learn more</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div class="helpBox">
-                    <div class="helpBox_img_wrapper">
-                        <img src="images/start-your-boating-adventure.png" alt="img">
-                    </div>
-                    <div class="helpBox_content">
-                        <p class="card_title_20_black">Start your boating adventure</p>
-                        <p class="card_desc_16_300">Set sail on your next adventure with a loan designed for your boat
-                            purchase.</p>
-                        <a href="#" class="common_btn_blue_bg">Learn more</a>
+                <div>
+                    <div class="helpBox">
+                        <div class="helpBox_img_wrapper">
+                            <img src="images/start-your-boating-adventure.png" alt="img">
+                        </div>
+                        <div class="helpBox_content">
+                            <p class="card_title_20_black">Start your boating adventure</p>
+                            <p class="card_desc_16_300">Set sail on your next adventure with a loan designed for your
+                                boat
+                                purchase.</p>
+                            <a href="#" class="common_btn_blue_bg">Learn more</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1045,6 +1106,7 @@
         </div>
     </section>
     <!-- fundSec_end -->
+
     <!-- whySec_start -->
     <section class="personal_ln whySec fundSec commn-prple-bg">
         <div class="container custom_container">
@@ -1268,6 +1330,7 @@
         </div>
     </section>
     <!-- recommendedSec_end -->
+
     <!-- frequentlySec_start -->
     <section class="personal_ln frequentlySec commn-bg-grey">
         <div class="container custom_container">
@@ -1427,16 +1490,294 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script>
         $('#helpSlick').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
-            slidesToScroll: 2,
-            centerMode: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
             variableWidth: true,
+            infinite: false,
+            arrows: false,
+            dots: true,
+
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        variableWidth: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        variableWidth: false
+                    }
+                }
+            ]
+        });
+    </script>
+
+    <script>
+        let freq = 12;
+        let loanType = "fixed";
+
+        const FIXED_MIN = 8.99;
+        const VARIABLE_MIN = 9.49;
+        const RATE_MAX = 29.39;
+
+        const LATITUDE_UPLIFT = 1.00225; // calibration factor to match Latitude display
+
+        const amount = document.getElementById("amount");
+        const term = document.getElementById("term");
+        const rate = document.getElementById("rate");
+
+        const fixedBtn = document.querySelector(".toggle button:nth-child(1)");
+        const variableBtn = document.querySelector(".toggle button:nth-child(2)");
+
+        const FIXED_COMPARISON = "10.67% Comparison rate p.a*";
+        const VARIABLE_COMPARISON = "11.16% Comparison rate p.a*";
+
+        fixedBtn.onclick = () => switchLoan("fixed");
+        variableBtn.onclick = () => switchLoan("variable");
+
+        function switchLoan(type) {
+            loanType = type;
+            fixedBtn.classList.remove("active");
+            variableBtn.classList.remove("active");
+
+            if (type === "fixed") {
+                fixedBtn.classList.add("active");
+                rate.min = FIXED_MIN; rate.max = RATE_MAX; rate.value = FIXED_MIN;
+                minRate.innerText = FIXED_MIN + "%";
+                comparisonRate.innerText = "(" + FIXED_COMPARISON + ")";
+            } else {
+                variableBtn.classList.add("active");
+                rate.min = VARIABLE_MIN; rate.max = RATE_MAX; rate.value = VARIABLE_MIN;
+                minRate.innerText = VARIABLE_MIN + "%";
+                comparisonRate.innerText = "(" + VARIABLE_COMPARISON + ")";
+            }
+
+            maxRate.innerText = RATE_MAX + "%";
+            calc();
+        }
+
+        document.querySelectorAll(".freq button").forEach(b => {
+            b.onclick = () => {
+                document.querySelectorAll(".freq button").forEach(x => x.classList.remove("active"));
+                b.classList.add("active");
+                freq = +b.dataset.f;
+                calc();
+            }
+        });
+
+        amount.oninput = calc;
+        term.oninput = calc;
+        rate.oninput = calc;
+
+        function calc() {
+            const principal = +amount.value;
+            const establishmentFee = 395;
+            const serviceFeeMonthly = 16.5;
+            const directDebitFee = 0;
+
+            let periodName = freq === 12 ? "month" : freq === 26 ? "fortnight" : "week";
+
+            const totalPayments = term.value * freq;
+            const ratePerPeriod = (+rate.value / 100) / freq;
+
+            let emi =
+                (principal * ratePerPeriod) /
+                (1 - Math.pow(1 + ratePerPeriod, -totalPayments));
+            emi = +emi.toFixed(2);
+
+            let estabPerPeriod = +(establishmentFee / totalPayments).toFixed(2);
+
+
+            let periodsPerYear =
+                freq === 12 ? 12 :
+                    freq === 26 ? 365 / 14 :
+                        365 / 7;
+
+            let serviceFeePerPeriod =
+                +(serviceFeeMonthly * 12 / periodsPerYear).toFixed(2);
+
+            let baseRepayment =
+                emi + estabPerPeriod + serviceFeePerPeriod;
+            baseRepayment = +baseRepayment.toFixed(2);
+
+            let uplifted = baseRepayment * LATITUDE_UPLIFT;
+
+            let displayedRepayment;
+            if (term.value <= 3) {
+                displayedRepayment = Math.ceil(uplifted);
+            } else if (term.value >= 6) {
+                displayedRepayment = Math.floor(uplifted);
+            } else {
+                displayedRepayment = Math.round(uplifted);
+            }
+
+            const totalInterest = (emi * totalPayments) - principal;
+            const totalFees =
+                establishmentFee +
+                serviceFeePerPeriod * totalPayments +
+                directDebitFee * totalPayments;
+
+            const totalPaid = principal + totalInterest + totalFees;
+
+
+            amountText.innerText = principal.toLocaleString();
+            termText.innerText = term.value;
+            rateText.innerText = rate.value;
+
+            document.getElementById("repayment").innerText =
+                displayedRepayment.toLocaleString();
+
+            document.getElementById("interest").innerText =
+                Math.round(totalInterest).toLocaleString();
+
+            document.getElementById("total").innerText =
+                Math.round(totalPaid).toLocaleString();
+
+            document.querySelector(".result-big small").innerText =
+                "/" + periodName;
+
+
+            modalRepay.innerText = displayedRepayment.toLocaleString();
+            basePay.innerText = (emi + estabPerPeriod).toFixed(2);
+            document.getElementById("serviceFeeDisplay").innerText =
+                serviceFeePerPeriod.toFixed(2);
+            document.getElementById("directDebitDisplay").innerText =
+                directDebitFee.toFixed(2);
+        }
+
+        switchLoan("fixed");
+
+        function openModal() { modal.style.display = "flex"; }
+        function closeModal() { modal.style.display = "none"; }
+    </script>
+
+    <script>
+        document.querySelectorAll(".synced-accordion .accordion-button")
+            .forEach(button => {
+                button.addEventListener("click", () => {
+                    const item = button.closest(".accordion-item");
+                    const index = item.dataset.index;
+
+                    document.querySelectorAll(".synced-accordion .accordion-item")
+                        .forEach(i => {
+                            i.querySelector(".accordion-collapse").classList.remove("show");
+                            i.querySelector(".accordion-button").classList.add("collapsed");
+                        });
+
+                    document.querySelectorAll(
+                        `.synced-accordion .accordion-item[data-index="${index}"]`
+                    ).forEach(i => {
+                        i.querySelector(".accordion-collapse").classList.add("show");
+                        i.querySelector(".accordion-button").classList.remove("collapsed");
+                    });
+                });
+            });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const stickyBar = document.querySelector(".bottom_bnr_sticky_nav");
+
+            function checkSticky() {
+                const rect = stickyBar.getBoundingClientRect();
+
+                if (rect.top <= 0) {
+                    stickyBar.classList.add("is-sticky");
+                } else {
+                    stickyBar.classList.remove("is-sticky");
+                }
+            }
+
+            window.addEventListener("scroll", checkSticky);
+            window.addEventListener("resize", checkSticky);
+
+            checkSticky();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            function initRecommendedSlider() {
+                if ($(window).width() < 1100) {
+
+                    if (!$('.recommendedBox_wrapper').hasClass('slick-initialized')) {
+                        $('.recommendedBox_wrapper').slick({
+                            slidesToShow: 2.5,
+                            slidesToScroll: 1,
+                            infinite: false,
+                            arrows: true,
+                            dots: true,
+                            swipeToSlide: true,
+                            responsive: [
+                                {
+                                    breakpoint: 992,
+                                    settings: {
+                                        slidesToShow: 2
+                                    }
+                                },
+                                {
+                                    breakpoint: 768,
+                                    settings: {
+                                        slidesToShow: 1
+                                    }
+                                }
+                            ]
+                        });
+                    }
+
+                } else {
+                    if ($('.recommendedBox_wrapper').hasClass('slick-initialized')) {
+                        $('.recommendedBox_wrapper').slick('unslick');
+                    }
+                }
+            }
+
+            initRecommendedSlider();
+            $(window).on('resize', initRecommendedSlider);
 
         });
     </script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            function toggleChooseSlider() {
+                const winWidth = $(window).width();
+                const $slider = $('.chooseSecBox_wrapper');
+
+                if (winWidth <= 767 && winWidth > 575) {
+
+                    if (!$slider.hasClass('slick-initialized')) {
+                        $slider.slick({
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: false,
+                            arrows: false,
+                            dots: true,
+                            swipeToSlide: true
+                        });
+                    }
+
+                } else {
+                    if ($slider.hasClass('slick-initialized')) {
+                        $slider.slick('unslick');
+                    }
+                }
+            }
+
+            toggleChooseSlider();
+            $(window).on('resize orientationchange', toggleChooseSlider);
+
+        });
+    </script>
+
+
 </body>
 
 </html>
